@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>name:</td>
+                <td><input type="text" name="name" id=""></td>
+            </tr>
+            <tr>
+                <td>s1:</td>
+                <td><input type="text" name="s1" id=""></td>
+            </tr>
+            <tr>
+                <td>s2:</td>
+                <td><input type="text" name="s2" id=""></td>
+            </tr>
+            <tr>
+                <td>s3:</td>
+                <td><input type="text" name="s3" id=""></td>
+            </tr>
+            <tr>
+                <td>s4:</td>
+                <td><input type="text" name="s4" id=""></td>
+            </tr>
+            <tr>
+                <td>s5:</td>
+                <td><input type="text" name="s5" id=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="save" value="save"></td>
+            </tr>
+        </table>
+    </form>
+    <table method="post" border="10px">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>s1</th>
+            <th>s2</th>
+            <th>s3</th>
+            <th>s4</th>
+            <th>s5</th>
+            <th>total</th>
+            <th>per</th>
+            <th>min</th>
+            <th>max</th>
+            <th>status</th>
+            <th>delete</th>
+            <th>update</th>
+           
+
+
+        </tr>
+        <% result.forEach(function(student){ %>
+         
+         <tr>
+            <td><%= student.id %></td>
+            <td><%= student.name %> </td>
+            <td><%= student.s1 %></td>
+            <td><%= student.s2 %></td>
+            <td><%= student.s3 %></td>
+            <td><%= student.s4 %></td>
+            <td><%= student.s5 %></td>
+            <td><%= student.total %></td>
+            <td><%= student.per %></td>
+            <td><%= student.min %></td>
+            <td><%= student.max %></td>
+            <td><%= student.status %></td>
+            <td><a href="delete/<%=student.id%>">delete</a></td>
+            <td><a href="update/<%=student.id%>">update</a></td>
+         </tr>   
+            
+        <% }); %>
+    </table>
+
+</body>
+</html>

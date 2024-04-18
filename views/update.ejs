@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% result.forEach(function(student){ %>
+    <form method="post">
+        <table>
+            <tr>
+                <td>name:</td>
+                <td><input type="text" name="name" value="<%= student.name %>"></td>
+            </tr>
+            <tr>
+                <td>s1:</td>
+                <td><input type="text" name="s1" value="<%= student.s1 %>"></td>
+            </tr>
+            <tr>
+                <td>s2:</td>
+                <td><input type="text" name="s2" value="<%= student.s2 %>"></td>
+            </tr>
+            <tr>
+                <td>s3:</td>
+                <td><input type="text" name="s3" value="<%= student.s3 %>"></td>
+            </tr>
+            <tr>
+                <td>s4:</td>
+                <td><input type="text" name="s4" value="<%= student.s4 %>"></td>
+            </tr>
+            <tr>
+                <td>s5:</td>
+                <td><input type="text" name="s5" value="<%= student.s5 %>"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="save" value="save"></td>
+            </tr>
+        </table>
+    </form>
+    <% }); %>
+</body>
+</html>
+
+
